@@ -1,0 +1,18 @@
+{
+    "name": "prettier-plugin-tailwindcss-nunjucks-reproduction",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "rm -rf ./public && npx @11ty/eleventy --serve & npx tailwindcss -i ./src/tailwind.css -o ./public/style.css --watch",
+        "build": "rm -rf ./public && ELEVENTY_ENV=production npx @11ty/eleventy && npx tailwindcss -i ./src/tailwind.css -o ./public/style.css --minify"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@11ty/eleventy": "^2.0.1",
+        "prettier-plugin-tailwindcss": "^0.5.4",
+        "tailwindcss": "^3.3.3"
+    }
+}
